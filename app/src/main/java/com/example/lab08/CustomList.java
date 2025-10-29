@@ -17,12 +17,8 @@ public class CustomList {
     public boolean hasCity(City city) {
         return cities.contains(city);
     }
-    public void delete(City city) {
-        for (City c : cities) {
-            if (c.getCityName().equals(city.getCityName()) && (c.getProvinceName().equals(city.getProvinceName()))) {
-                cities.remove(c);
-            }
-        }
+    public void deleteCity(City city) {
+        cities.removeIf(c -> c.getCityName().equals(city.getCityName()) && (c.getProvinceName().equals(city.getProvinceName())));
     }
 
 }
