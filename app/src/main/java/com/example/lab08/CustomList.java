@@ -21,4 +21,8 @@ public class CustomList {
         cities.removeIf(c -> c.getCityName().equals(city.getCityName()) && (c.getProvinceName().equals(city.getProvinceName())));
     }
 
+    public int countCities() {
+        return cities.size();
+    }
+
 }
